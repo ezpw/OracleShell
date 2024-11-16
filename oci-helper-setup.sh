@@ -4,6 +4,7 @@
 sudo mkdir -p /app/oci-helper/keys && cd /app/oci-helper
 wget https://github.com/ezpw/oci-helper/releases/download/v1.0.0/application.yml
 wget https://github.com/ezpw/oci-helper/releases/download/v1.0.0/oci-helper.db
+iptables -I INPUT -p tcp --dport 8898 -j ACCEPT
 
 # 检查并安装 Docker
 echo "检查 Docker..."
