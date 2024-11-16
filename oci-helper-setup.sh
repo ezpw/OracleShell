@@ -62,7 +62,7 @@ sudo docker run -d --name oci-helper --restart=always \
     -v /app/oci-helper/application.yml:/app/oci-helper/application.yml \
     -v /app/oci-helper/oci-helper.db:/app/oci-helper/oci-helper.db \
     -v /app/oci-helper/keys:/app/oci-helper/keys \
-    ghcr.io/ezpw/oci-helper:master
+    ghcr.io/yohann0617/oci-helper:master
 
 # 检查容器是否启动成功
 if [ $? -eq 0 ]; then
