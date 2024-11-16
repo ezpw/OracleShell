@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # 检查 Docker 容器是否已存在
-if docker ps -a | grep -q oci-helper; then
-    echo "oci-helper 容器已存在。"
+if docker ps -a | grep -q ghcr.io/yohann0617/oci-helper; then
+    echo "已存在使用 ezpw-ocihelp 镜像的容器。"
     exit 0
 fi
 
