@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 检查 Docker 容器是否已存在
-if docker ps -a --filter "ancestor=ghcr.io/yohann0617/oci-helper:master" | grep -q CONTAINER; then
+if docker ps -a --format "{{.Image}}" | grep -q "ghcr.io/yohann0617/oci-helper:master"; then
     echo "已存在使用 ezpw-ocihelp 镜像的容器。"
     exit 0
 fi
