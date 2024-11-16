@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# 检查 Docker 容器是否已存在
+if docker ps -a | grep -q oci-helper; then
+    echo "oci-helper 容器已存在。"
+    exit 0
+fi
+
 # 命令
 sudo mkdir -p /app/oci-helper/keys && cd /app/oci-helper
 wget https://github.com/ezpw/oci-helper/releases/download/v1.0.0/application.yml
@@ -72,5 +78,3 @@ else
     echo "启动 oci-helper 容器失败，请检查 Docker 安装或权限。"
     exit 1
 fi
-
-
